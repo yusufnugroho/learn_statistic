@@ -2,6 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react'
 import { View, TextInput, Text, Button } from 'react-native-ui-lib'
 import { Typography, Colors } from 'react-native-ui-lib';
+import { Actions } from 'react-native-router-flux'
 
 
 @observer
@@ -20,9 +21,11 @@ export default class ComponentMainLogin extends React.Component {
         const store = this.props.store
         if((this.state.username).toLowerCase() === 'test' && (this.state.password).toLowerCase() === 'test') {
             alert('Login Success')
+            Actions.HomePage()
             console.log('State (username, password): ', this.state.username, this.state.password)
         } else {
-            alert('Login Failed, \n Please use "test/test" for username and password')
+            alert('Login Failed, \n User/Pass -> "test/test" ')
+            // Actions.HomePage()
         }
         // try {
         //     console.log('post login')
@@ -66,8 +69,9 @@ export default class ComponentMainLogin extends React.Component {
                     <TextInput text50 placeholder="password" secureTextEntry dark10 onChangeText={(text) => this.setState({password: text})}/>
                 </View>
                 <View margin-80 center>
-                    <Button text70 white background-orange30 label="Login"  onPress={this.handleSubmit}/>
-                    <Button link text70 orange30 label="Sign Up" marginT-20/>
+                    <Button text70 white background-orange30 label="Login" onPress={ this.handleSubmit }/>
+                    <Button link text70 orange30 label="Sign Up" marginT-20 onPress={()=> alert('This Function Still In Prototype')}/>
+                    {/* <Button link text70 orange30 label="Move To Home" marginT-20 onPress={ Actions.HomePage }/> */}
                 </View>
             </View>
         );

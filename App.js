@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { Router, Scene } from 'react-native-router-flux'
 import MainStore from './src/Model/MobX/MainStore'
 import LoginPage from './src/Pages/Login/ComponentMainLogin'
+import HomePage from './src/Pages/Home/ComponentMainHome'
 export default class App extends React.Component {
   render() {
     return (
@@ -12,6 +13,10 @@ export default class App extends React.Component {
           component={ LoginPage }
           hideNavBar
           initial
+        />
+        <Scene key="HomePage"
+          component={ HomePage }
+          hideNavBar
         />
       </Scene>
   </Router>
