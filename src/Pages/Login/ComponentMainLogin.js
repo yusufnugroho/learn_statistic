@@ -21,7 +21,7 @@ export default class ComponentMainLogin extends React.Component {
         const store = this.props.store
         if((this.state.username).toLowerCase() === 'test' && (this.state.password).toLowerCase() === 'test') {
             alert('Login Success')
-            Actions.HomePageTab()
+            Actions.HomePageTabMultiplication()
             console.log('State (username, password): ', this.state.username, this.state.password)
         } else {
             alert('Login Failed, \n User/Pass -> "test/test" ')

@@ -10,7 +10,7 @@ import {
   } from 'react-native'
 
 import { Actions } from 'react-native-router-flux'
-import ComponentMainHomePageAdditional from '../ShareComponent/BottomBar/ComponentMainBottomBar'
+import ComponentMainBottomBar from '../ShareComponent/BottomBar/ComponentMainBottomBar'
 
 @observer
 export default class ComponentMainHome extends React.Component {
@@ -45,7 +45,7 @@ export default class ComponentMainHome extends React.Component {
         <View>
             <ScrollView>
                 <View flex paddingH-25 paddingT-120 background-grey80>
-                    <Text blue20 text20>Home</Text>
+                    <Text blue20 text20>Additional</Text>
                     <View paddingV-60>
                         <TextInput text50 placeholder="X" dark10 onChangeText={(text) => this.setState({x: text})}/>
                         <TextInput text50 placeholder="N" secureTextEntry dark10 onChangeText={(text) => this.setState({n: text})}/>

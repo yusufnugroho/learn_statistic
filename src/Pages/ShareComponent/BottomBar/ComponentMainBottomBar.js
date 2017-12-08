@@ -25,19 +25,20 @@ export default class ComponentMainBottomBar extends React.Component {
                     labelColor="white"
                     rippleColor="white"
                     style={{ height: 56, elevation: 8, position: 'absolute', left: 0, bottom: 0, right: 0 }}
-                    onTabChange={(newTabIndex) => alert(`New Tab at position ${newTabIndex}`)}
+                    
+                    // onTabChange={(newTabIndex) => alert(`New Tab at position ${newTabIndex}`)}
                 >
                 <Tab
                     barBackgroundColor="#37474F"
-                    label="Movies & TV"
+                    label="Additional"
                     icon={<Icon size={24} color="white" name="tv"
-                    onPress={()=>Actions.HomePageTab()}/>}
+                    onPress={()=>Actions.HomePageTabAdditional()}/>}
                 />
                 <Tab
                     barBackgroundColor="#00796B"
-                    label="Music"
+                    label="Multiplication"
                     icon={<Icon size={24} color="white" name="music-note"
-                    onPress={()=>Actions.HomePageAdditional()}/>}
+                    onPress={()=>Actions.HomePageTabMultiplication()}/>}
                 />
                 <Tab
                     barBackgroundColor="#5D4037"
