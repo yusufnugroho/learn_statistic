@@ -11,22 +11,22 @@ export default class App extends React.Component {
   render() {
     return (
       <Router store={ MainStore }>
-      <Scene key="root">
-        <Scene key="LoginPage"
-          component={ LoginPage }
-          hideNavBar
-          initial
-        />
-        <Scene key="HomePage"
-          component={ HomePage }
-          hideNavBar
-        />
-        <Scene key="HomePageTab"
-          component={ HomePageTab }
-          hideNavBar
-        />
-      </Scene>
-  </Router>
+        <Scene key="root">
+          <Scene key="LoginPage"
+            component={ LoginPage }
+            hideNavBar
+            initial
+          />
+          <Scene key="HomePage"
+            component={ HomePage }
+            hideNavBar
+          />
+          <Scene key="HomePageTab"
+            component={ HomePageTab }
+            hideNavBar
+          />
+        </Scene>
+      </Router>
     );
   }
 }
