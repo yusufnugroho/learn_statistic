@@ -11,7 +11,6 @@ export default class App extends React.Component {
   render() {
     return (
       <Router store={ MainStore }>
-<<<<<<< HEAD
         <Scene key="root">
           <Scene key="LoginPage"
             component={ LoginPage }
@@ -26,30 +25,12 @@ export default class App extends React.Component {
             component={ HomePageTab }
             hideNavBar
           />
+          <Scene key="HomePageAdditional"
+          component={ HomePageAdditional }
+          hideNavBar
+        />
         </Scene>
-      </Router>
-=======
-      <Scene key="root">
-        <Scene key="LoginPage"
-          component={ LoginPage }
-          hideNavBar
-          initial
-        />
-        <Scene key="HomePage"
-          component={ HomePage }
-          hideNavBar
-        />
-        <Scene key="HomePageTab"
-          component={ HomePageTab }
-          hideNavBar
-        />
-        <Scene key="HomePageAdditional"
-        component={ HomePageAdditional }
-        hideNavBar
-      />
-      </Scene>
-  </Router>
->>>>>>> d54b2330c62deeb91c5fdbbf8b9b955e306b01eb
+    </Router>
     );
   }
 }
