@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 
 ## Library
-- MobX
+- mobx
 - mobx-react
 - react-native-router-flux
+- validate 
