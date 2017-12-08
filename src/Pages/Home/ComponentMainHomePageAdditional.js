@@ -10,7 +10,7 @@ import {
   } from 'react-native'
 
 import { Actions } from 'react-native-router-flux'
-import ComponentMainBottomBar from '../ShareComponent/BottomBar/ComponentMainBottomBar'
+import ComponentMainHomePageAdditional from '../ShareComponent/BottomBar/ComponentMainBottomBar'
 
 @observer
 export default class ComponentMainHome extends React.Component {

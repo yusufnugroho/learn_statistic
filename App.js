@@ -4,8 +4,8 @@ import { Router, Scene } from 'react-native-router-flux'
 import MainStore from './src/Model/MobX/MainStore'
 import LoginPage from './src/Pages/Login/ComponentMainLogin'
 import HomePage from './src/Pages/Home/ComponentMainHome'
-import HomePageTab from './src/Pages/Home/ComponentMainHomeTab'
-import HomePageAdditional from './src/Pages/Home/ComponentHomePageAdditional'
+import HomePageTabMultiplication from './src/Pages/Home/ComponentMainHomePageMultiplication'
+import HomePageTabAdditional from './src/Pages/Home/ComponentHomeMainHomePageAdditional'
 
 export default class App extends React.Component {
   render() {
@@ -17,16 +17,12 @@ export default class App extends React.Component {
             hideNavBar
             initial
           />
-          <Scene key="HomePage"
-            component={ HomePage }
-            hideNavBar
-          />
           <Scene key="HomePageTab"
-            component={ HomePageTab }
+            component={ HomePageTabMultiplication }
             hideNavBar
           />
           <Scene key="HomePageAdditional"
-          component={ HomePageAdditional }
+          component={ HomePageTabAdditional }
           hideNavBar
         />
         </Scene>

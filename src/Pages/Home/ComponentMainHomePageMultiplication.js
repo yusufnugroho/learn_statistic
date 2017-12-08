@@ -14,7 +14,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 import ComponentMainBottomBar from '../ShareComponent/BottomBar/ComponentMainBottomBar'
 
 @observer
-export default class ComponentMainHomeTab extends React.Component {
+export default class ComponentMainHomePageMultiplication extends React.Component {
     constructor(props){
         super(props)
         this.state = {
