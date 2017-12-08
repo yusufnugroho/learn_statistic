@@ -5,7 +5,7 @@ import MainStore from './src/Model/MobX/MainStore'
 import LoginPage from './src/Pages/Login/ComponentMainLogin'
 import HomePage from './src/Pages/Home/ComponentMainHome'
 import HomePageTab from './src/Pages/Home/ComponentMainHomeTab'
-
+import HomePageAdditional from './src/Pages/Home/ComponentHomePageAdditional'
 
 export default class App extends React.Component {
   render() {
@@ -25,6 +25,10 @@ export default class App extends React.Component {
           component={ HomePageTab }
           hideNavBar
         />
+        <Scene key="HomePageAdditional"
+        component={ HomePageAdditional }
+        hideNavBar
+      />
       </Scene>
   </Router>
     );
