@@ -8,13 +8,12 @@ import {
     PixelRatio,
     ScrollView
   } from 'react-native'
+
 import { Actions } from 'react-native-router-flux'
-import BottomNavigation, { Tab } from 'react-native-material-bottom-navigation'
-import Icon from 'react-native-vector-icons/MaterialIcons'
 import ComponentMainBottomBar from '../ShareComponent/BottomBar/ComponentMainBottomBar'
 
 @observer
-export default class ComponentMainHomeTab extends React.Component {
+export default class ComponentMainHome extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -27,7 +26,7 @@ export default class ComponentMainHomeTab extends React.Component {
     }
     async handlePostLogin() {
         const store = this.props.store
-        let result = parseFloat(this.state.x)*parseFloat(this.state.n)
+        let result = parseFloat(this.state.x)+parseFloat(this.state.n)
         alert(result)
       }
     handleSubmit(){
@@ -43,24 +42,22 @@ export default class ComponentMainHomeTab extends React.Component {
     render() {
         const store = this.props.store
         return (
-            <View>
-                <ScrollView>
-                    <View flex paddingH-25 paddingT-120 background-grey80>
-                        <Text blue20 text20>Home</Text>
-                        <View paddingV-60>
-                            <TextInput text50 placeholder="X" dark10 onChangeText={(text) => this.setState({x: text})}/>
-                            <TextInput text50 placeholder="N" secureTextEntry dark10 onChangeText={(text) => this.setState({n: text})}/>
-                        </View>
-                        <View margin-80 center>
-                            <Button text70 white background-orange30 label="Calculate"  onPress={this.handleSubmit}/>
-                            <Button link text70 orange30 label="Logout" marginT-20 onPress={ Actions.LoginPage }/>
-                            <Button link text70 orange30 label="Tab Home" marginT-20 onPress={ Actions.LoginPage }/>
-                            <Button link text70 red30 label="Tab Home Additional" marginT-20 onPress={ Actions.HomePageAdditional }/>
-                        </View>
+        <View>
+            <ScrollView>
+                <View flex paddingH-25 paddingT-120 background-grey80>
+                    <Text blue20 text20>Home</Text>
+                    <View paddingV-60>
+                        <TextInput text50 placeholder="X" dark10 onChangeText={(text) => this.setState({x: text})}/>
+                        <TextInput text50 placeholder="N" secureTextEntry dark10 onChangeText={(text) => this.setState({n: text})}/>
                     </View>
-                </ScrollView>
-
-                <ComponentMainBottomBar/>
+                    <View margin-80 center>
+                        <Button text70 white background-orange30 label="Calculate"  onPress={this.handleSubmit}/>
+                        <Button link text70 orange30 label="Logout" marginT-20 onPress={ Actions.LoginPage }/>
+                        <Button link text70 orange30 label="Home With Tab" marginT-20 onPress={ Actions.HomePageTab }/>
+                    </View>
+                </View>
+            </ScrollView>
+            <ComponentMainBottomBar/>
         </View>
         );
     }

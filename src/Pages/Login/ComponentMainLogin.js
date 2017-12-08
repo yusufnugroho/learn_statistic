@@ -21,7 +21,7 @@ export default class ComponentMainLogin extends React.Component {
         const store = this.props.store
         if((this.state.username).toLowerCase() === 'test' && (this.state.password).toLowerCase() === 'test') {
             alert('Login Success')
-            Actions.HomePage()
+            Actions.HomePageTab()
             console.log('State (username, password): ', this.state.username, this.state.password)
         } else {
             alert('Login Failed, \n User/Pass -> "test/test" ')
@@ -43,7 +43,7 @@ export default class ComponentMainLogin extends React.Component {
         //     let responseJson = await response.json()
         //     if(responseJson.boolSummaryCheckLogin === true){
         //         alert('Login Success')
-        //         store.updateToken(responseJson.payload_db, '--', '--')                    
+        //         store.updateToken(responseJson.payload_db, '--', '--')
         //     } else {
         //         alert('Login Fail, Please Recheck Useraname/Password')
         //     }
@@ -81,7 +81,7 @@ Colors.loadColors({
     pink: '#FF69B4',
     gold: '#FFD700',
   });
-  
+
   Typography.loadTypographies({
     h1: {fontSize: 58, fontWeight: '300', lineHeight: 80},
     h2: {fontSize: 46, fontWeight: '300', lineHeight: 64},
